@@ -38,7 +38,14 @@ function savingslist(){
 function etclist(){
 	location.href='qnaEtcList.do?current_page=1';
 }
-
+function emailCheck() {
+	var loginUser = "${uid}";
+	if(!loginUser){
+		alert('로그인 후 이용 가능합니다.');
+		return location.href = "loginForm.do";		
+	}else{
+	
+	}
 </script>
 <%
 HttpSession session = request.getSession();
@@ -49,7 +56,7 @@ String uid=(String) session.getAttribute("uid");
 	<jsp:include page="../../header.jsp"></jsp:include>
 	
 <!-- *********************** 사이드 메뉴 ****************************  -->	
-	
+	<c:set var="uid" value="<%=uid%>"/>
    <div id="body_div">
 	<div id="side_menu">
 		<h4><a href="#">고객센터</a></h4>

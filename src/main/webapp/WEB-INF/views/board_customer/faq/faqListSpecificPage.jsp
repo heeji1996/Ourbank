@@ -39,6 +39,15 @@ function savingslist(){
 function etclist(){
 	location.href='faqEtcList.do?current_page=1';
 }
+function emailCheck() {
+	var loginUser = "${uid}";
+	if(!loginUser){
+		alert('로그인 후 이용 가능합니다.');
+		return location.href = "loginForm.do";		
+	}else{
+	
+	}
+}
 
 </script>
 </head>

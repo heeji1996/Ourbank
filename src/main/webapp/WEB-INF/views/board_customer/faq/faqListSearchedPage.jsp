@@ -25,6 +25,16 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/body.css" >
 <meta charset="EUC-KR">
 <title>자주하는 질문</title>
+<script type="text/javascript">
+function emailCheck() {
+	var loginUser = "${uid}";
+	if(!loginUser){
+		alert('로그인 후 이용 가능합니다.');
+		return location.href = "loginForm.do";		
+	}else{
+	
+	}
+</script>
 
 </head>
 
@@ -60,7 +70,7 @@
 	String uid=(String) session.getAttribute("uid"); 
 %>
 <div id="line_div">
-	<div id="sub_logo">
+<div id="sub_logo">
 		<h2>FAQ</h2>
     </div> 
  <div id="site_div">
